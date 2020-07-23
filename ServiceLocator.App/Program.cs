@@ -16,11 +16,11 @@ namespace ServiceLocator.App
                 //Transient
                 Console.WriteLine($"Transient title: {manager.ReaderAsTransient.List().FirstOrDefault().Title}");
                 Console.WriteLine($"Transient title: {manager.ReaderAsTransient.List().FirstOrDefault().Title}. This second title ever diverges from first.");
-
+                Console.WriteLine();
                 //Scoped
                 Console.WriteLine($"Scoped title: {manager.ReaderAsScoped.List().FirstOrDefault().Title}");
                 Console.WriteLine($"Scoped title: {manager.ReaderAsScoped.List().FirstOrDefault().Title}. This second title is equal to previous title.");
-
+                Console.WriteLine();
                 //Singleton
                 if (i == 0)
                 {
@@ -29,6 +29,8 @@ namespace ServiceLocator.App
                 }
                 else
                     Console.WriteLine($"Singleton title: {manager.ReaderAsSingleton.List().FirstOrDefault().Title}. This title is equal to previous two titles in a previous thread.");
+                Console.WriteLine();
+                Console.WriteLine();
             }
         }
     }
